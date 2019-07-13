@@ -1,56 +1,62 @@
 package LinkedList;
-
-public class SingleLinkedList 
+/////////////////////////////////////////////////////////////////////
+public class SingleLinkedList<E>
 {
    private Node lastNode;
    private int numbOfNodes;
-   
+   //-------------------------------------------------------------------
    public SingleLinkedList()
    {
       lastNode = null;
       numbOfNodes = 0;
    }
-   
-   public void add(int data)
+   //-------------------------------------------------------------------
+   public void add(E data)
    {
       Node newNode = new Node(data, lastNode);
       lastNode = newNode;
       numbOfNodes++;
    }
-   
-   public void remove()
+   //-------------------------------------------------------------------
+   public E remove()
    {
       if (lastNode != null)
       {
          lastNode = lastNode.getNext();
          numbOfNodes--;
       }
-   }
-   
-   private class Node
-   {
-      private int data;
-      private Node next;
       
-      public Node(int data)
+      return (E) lastNode.getData();
+   }
+   //-------------------------------------------------------------------
+   /////////////////////////////////////////////////////////////////////
+   private class Node<E>
+   {
+      private E data;
+      private Node next;
+      //-------------------------------------------------------------------
+      public Node(E data)
       {
          this(data, null);
       }
-      
-      public Node(int data, Node next)
+      //-------------------------------------------------------------------
+      public Node(E data, Node next)
       {
          this.data = data;
          this.next = next;
       }
-      
+      //-------------------------------------------------------------------
       public Node getNext()
       {
          return next;
       }
-      
-      public int getData()
+      //-------------------------------------------------------------------
+      public E getData()
       {
          return data;
       }
+      //-------------------------------------------------------------------
    }
+   /////////////////////////////////////////////////////////////////////
 }
+/////////////////////////////////////////////////////////////////////

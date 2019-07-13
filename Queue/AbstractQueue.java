@@ -1,17 +1,17 @@
-package Stack;
+package Queue;
 /////////////////////////////////////////////////////////////////////
-public abstract class AbstractStack<E> 
+public abstract class AbstractQueue<E>
 {
 	protected int size;
 	//-------------------------------------------------------------------
-	public AbstractStack() 
+	public AbstractQueue()
 	{
 		this.size = 0;
 	}
 	//-------------------------------------------------------------------
 	public boolean isEmpty()
 	{
-		return (size == 0);
+		return (getSize() == 0);
 	}
 	//-------------------------------------------------------------------
 	public int getSize()
@@ -19,11 +19,11 @@ public abstract class AbstractStack<E>
 		return size;
 	}
 	//-------------------------------------------------------------------
+	public abstract E dequeue();
+	//-------------------------------------------------------------------
+	public abstract void enqueue(E element);
+	//-------------------------------------------------------------------
 	public abstract E peek();
-	//-------------------------------------------------------------------
-	public abstract E pop();
-	//-------------------------------------------------------------------
-	public abstract void push(E element);
 	//-------------------------------------------------------------------
 }
 /////////////////////////////////////////////////////////////////////

@@ -1,40 +1,41 @@
-package Stack;
+package Queue;
 
 import java.util.ArrayList;
-import java.util.EmptyStackException;
 import java.util.List;
+import java.util.NoSuchElementException;
 /////////////////////////////////////////////////////////////////////
-public class ArrayStack<E> extends AbstractStack<E>
+public class ArrayQueue<E> extends AbstractQueue<E>
 {
-	private List<E> stack;
+	private List<E> queue;
 	//-------------------------------------------------------------------
-	public ArrayStack()
+	public ArrayQueue()
 	{
 		super();
-		stack = new ArrayList<E>();
+		queue = new ArrayList<E>();
+	}
+	//-------------------------------------------------------------------
+	public E dequeue() 
+	{
+		if(this.isEmpty())
+			throw new NoSuchElementException();
+		
+		this.size--;
+		queue.remove(0);
+		return queue.get(0);
+	}
+	//-------------------------------------------------------------------
+	public void enqueue(E element) 
+	{
+		queue.add(element);
+		this.size++;
 	}
 	//-------------------------------------------------------------------
 	public E peek() 
 	{
 		if(this.isEmpty())
-			throw new EmptyStackException();
-		
-		return stack.get(this.getSize() - 1);
-	}
-	//-------------------------------------------------------------------
-	public E pop() 
-	{
-		if(this.isEmpty())
-			throw new EmptyStackException();
-		
-		this.size--;
-		return stack.remove(this.getSize());
-	}
-	//-------------------------------------------------------------------
-	public void push(E element) 
-	{
-		this.size++;
-		stack.add(element);
+			throw new NoSuchElementException();
+
+		return queue.get(0);
 	}
 	//-------------------------------------------------------------------
 }

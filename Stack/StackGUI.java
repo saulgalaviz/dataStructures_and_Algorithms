@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
-
+/////////////////////////////////////////////////////////////////////
 public class StackGUI implements ActionListener
 {
 	private ArrayStack<String> arrStack;
@@ -14,7 +14,7 @@ public class StackGUI implements ActionListener
 	private JPanel panel;
 	private JTextField input;
 	private JButton submit;
-	
+	//-------------------------------------------------------------------
 	public StackGUI()
 	{
 		frame = new JFrame("Stack Interface");
@@ -59,7 +59,7 @@ public class StackGUI implements ActionListener
 		
 		frame.setVisible(true);
 	}
-	
+	//-------------------------------------------------------------------
 	public void arrayOperations()
 	{
 		arrStack = new ArrayStack<>();
@@ -112,7 +112,7 @@ public class StackGUI implements ActionListener
 		submit.setForeground(Color.WHITE);
 		submit.addActionListener(this);
 	}
-	
+	//-------------------------------------------------------------------
 	public void actionPerformed(ActionEvent ae)
 	{
 		switch(ae.getActionCommand())
@@ -254,10 +254,11 @@ public class StackGUI implements ActionListener
 				frame.add(panel);
 		}
 	}
-	
+	//-------------------------------------------------------------------	
 	public static void main(String[] args) 
 	{
 		SwingUtilities.invokeLater(() -> new StackGUI());
 	}
-
+	//-------------------------------------------------------------------
 }
+/////////////////////////////////////////////////////////////////////

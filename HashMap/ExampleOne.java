@@ -1,9 +1,10 @@
 package HashMap;
-
+//Given an array of integers, return indices of the two numbers such that they add up to a specific target. We can't use same element twice
 import java.util.HashMap;
-
-public class ExampleOne //Given an array of integers, return indices of the two numbers such that they add up to a specific target. We can't use same element twice
+/////////////////////////////////////////////////////////////////////
+public class ExampleOne 
 {
+   //-------------------------------------------------------------------
    public int[] exampleOne(int[] numbers, int target)
    {
       HashMap<Integer, Integer> map = new HashMap<>();
@@ -22,7 +23,8 @@ public class ExampleOne //Given an array of integers, return indices of the two 
             return new int[] {counter, map.get(value)};
          }
       }
-      
       throw new IllegalArgumentException("There were no two values adding up to the target value!");
    }
+   //-------------------------------------------------------------------
 }
+/////////////////////////////////////////////////////////////////////
