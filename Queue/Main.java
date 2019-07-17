@@ -48,6 +48,7 @@ public class Main
 		System.out.println(ll.dequeue());
 		ll.enqueue("hola");
 		System.out.println(ll.dequeue());
+		System.out.println(ll.dequeue());
 	}
 	//-------------------------------------------------------------------
 }
