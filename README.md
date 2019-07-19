@@ -1,5 +1,7 @@
-Leetcode Logic Solutions via Java: 
+Leetcode Algorithm Design Solutions via Java: 
 https://github.com/saulgalaviz/leetCode_Submissions 
+
+-----------------------------------------------------------------------------------------------  
 
 Concepts: Data Structures and Algorithms 
 
